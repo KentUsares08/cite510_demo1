@@ -65,6 +65,8 @@
   const drawer = ref(false)
 
   const  items =  ref([
+           { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
+           { title: 'Basic Math', icon: 'mdi-view-dashboard', path: '/basicMath'},
            { title: 'About Me', icon: 'mdi-view-dashboard', path: '/aboutMe'},
            { title: 'String App', icon: 'mdi-help-box', path: '/stringApp'},
            { title: 'Research', icon: 'mdi-help-box', path: '/rschVue'},
