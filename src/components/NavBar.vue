@@ -67,10 +67,9 @@
   const  items =  ref([
            { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
            { title: 'Activities', icon: 'mdi-view-dashboard', path: '/basicMath'},
-           { title: 'About Me', icon: 'mdi-view-dashboard', path: '/aboutMe'},
+           { title: 'About the Project', icon: 'mdi-view-dashboard', path: '/aboutMe'},
            { title: 'Research', icon: 'mdi-help-box', path: '/rschVue'},
            { title: 'Calculator', icon: 'mdi-plus-one', path: '/calcuView'},
-           { title: 'AxousDemo', icon: 'mdi-plus-one', path: '/axiosView'},
            { title: 'Question', icon: 'mdi-plus-one', path: '/questionView'},
         ])
 

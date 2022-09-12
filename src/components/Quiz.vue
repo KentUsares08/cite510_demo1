@@ -1,11 +1,17 @@
 <template>
     <div class="container">
+    <v-img
+  src="https://media.discordapp.net/attachments/754747805200941196/1018789489432346634/unknown.png"
+  contain
+  max-height="250"
+  max-width="750"
+  >Category: <b>Computer</b></v-img>
       <div class="correctAnswers">
-        You have
+       Currently you have
         <strong>{{ correctAnswers }} correct {{ pluralizeAnswer }}!</strong>
       </div>
       <div class="correctAnswers">
-        Currently at question {{ index + 1 }} of {{ questions.length }}
+        Question You are currently now at {{ index + 1 }} of {{ questions.length }}
       </div>
       <v-card 
  class="ma-5 px-2 py-2 justify-content-center"

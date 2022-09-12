@@ -3,7 +3,17 @@
     class="ma-15"
     max-width="700"
     style="padding-left: 20px; "
+    
  >
+<v-img
+  src="https://cdn.discordapp.com/attachments/754747805200941196/1014446204244983849/zoom_in.png"
+  contain
+  max-height="250"
+  max-width="250"
+  >
+ 
+  </v-img>
+
   <div class="pl" >
     <p>
     <h1>About Me</h1>

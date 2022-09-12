@@ -1,5 +1,30 @@
 <template >
+  <v-row>
+ <v-col>
+<v-card
+    class="ma-15"
+    max-width="700"
+    style="padding-left: 20px; "
+  
+ >
+ <v-img
+  src="https://media.discordapp.net/attachments/754747805200941196/1018793384011386890/unknown.png?width=1025&height=398"
+  contain
+  max-height="750"
+  max-width="750"
+  >
  
+  </v-img>
+  <div class="pl" >
+    <p style="font-size: 25px">
+      <h2>Activities</h2>
+    <br />
+        at this page it contain the basic math, count the vowels, and String Manipulator
+    </p>
+  </div>
+</v-card>
+</v-col>
+<v-col>
 <v-card
     class="ma-15"
     max-width="700"
@@ -7,34 +32,50 @@
     
  >
  <v-img
-  src="https://cdn.discordapp.com/attachments/754747805200941196/1014446204244983849/zoom_in.png"
+  src="https://cdn.discordapp.com/attachments/754747805200941196/1018795735183020063/unknown.png"
   contain
-  max-height="250"
-  max-width="250"
+  max-height="750"
+  max-width="750"
   >
  
   </v-img>
   <div class="pl" >
-    <p>
-    <h1>About Me</h1>
+   
+    <p style="font-size: 25px">
+      <h2>Research</h2> 
     <br />
-         Hello! my name is Kent Ira M. Usares
-    <br />
-    I live at Manila, Philippines.
-    <br />
-    And Im a 4th year Student at Technological Instutite of the Philippines
-    <br />
-    My hobbies, I do play guitar sometime if I got bored and game as well, if I 
-    have a free time I do digital drawing, I choice this program because, i like computers
-    in the first place that's why, and second was because I was inspired to my cousin becuase
-    I see how he work doing his projects.
-    <br /><br />
-    This are my official Personal Social Media account 
-    <a target="_blank" href="https://www.facebook.com/kent.usares">Kent's Personal Social Media Account</a>,
-    if you want to know how i Look like and know my status just click the link.
+        At this page it contain about a research of Vuetify and information about it as well.
     </p>
   </div>
 </v-card>
+</v-col>
+<v-col>
+<v-card
+    class="ma-15"
+    max-width="700"
+    style="padding-left: 20px; "
+    
+ >
+ <v-img
+  src="https://media.discordapp.net/attachments/754747805200941196/1018797067717591051/unknown.png?width=1025&height=454"
+  contain
+  max-height="750"
+  max-width="750"
+  >
+ 
+  </v-img>
+  <div class="pl" >
+    <p style="font-size: 25px">
+    <h2>Quiz Question</h2>
+   
+    
+    <br />
+        At this page we have a fun simple quiz that user are able to interact with.
+    </p>
+  </div>
+</v-card>
+</v-col>
+</v-row>
 </template>
 
 <style>
@@ -45,4 +86,5 @@
 
   }
 }
+
 </style>
