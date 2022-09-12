@@ -3,8 +3,8 @@
       <v-toolbar app theme="dark">
        <v-app-bar-nav-icon @click='toggleDrawer' ></v-app-bar-nav-icon>
       <v-toolbar-title >
-        <span class="font-weight-light">Laboratory 5 </span>
-        <span>Vuetify Demo</span>
+        <span class="font-weight-light">Midterm </span>
+        <span>Project</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
 
@@ -66,12 +66,12 @@
 
   const  items =  ref([
            { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
-           { title: 'Basic Math', icon: 'mdi-view-dashboard', path: '/basicMath'},
+           { title: 'Activities', icon: 'mdi-view-dashboard', path: '/basicMath'},
            { title: 'About Me', icon: 'mdi-view-dashboard', path: '/aboutMe'},
-           { title: 'String App', icon: 'mdi-help-box', path: '/stringApp'},
            { title: 'Research', icon: 'mdi-help-box', path: '/rschVue'},
            { title: 'Calculator', icon: 'mdi-plus-one', path: '/calcuView'},
            { title: 'AxousDemo', icon: 'mdi-plus-one', path: '/axiosView'},
+           { title: 'Question', icon: 'mdi-plus-one', path: '/questionView'},
         ])
 
  function toggleDrawer(){

@@ -1,7 +1,7 @@
 <template>
     <v-card class="pl-5 pt-4 " >
     <h1>
-        Axios Demo
+        Mythology Quiz
     </h1>
     <v-btn @click="getQuestions"> Get Post </v-btn>
     <v-list-item
@@ -35,7 +35,7 @@
     const questions=ref([])
 
     async function getQuestions (){
-        axios.get('https://opentdb.com/api.php?amount=20&category=18&difficulty=easy&type=multiple').then( response => {
+        axios.get('https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple').then( response => {
         questions.value=(response.data.results)
         })
     }
