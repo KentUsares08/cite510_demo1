@@ -35,7 +35,7 @@
     const questions=ref([])
 
     async function getQuestions (){
-        axios.get('https://opentdb.com/api.php?amount=10&category=20&difficulty=easy&type=multiple').then( response => {
+        axios.get('https://opentdb.com/api.php?amount=5&category=20&difficulty=easy&type=multiple').then( response => {
         questions.value=(response.data.results)
         })
     }
