@@ -6,6 +6,8 @@ import ResearchVueView from '../views/ResearchVueView.vue'
 import CalculatorView from '../views/CalculatorView.vue'
 import AxiosDemoView from '../views/AxiosDemoView.vue'
 import QuestionView from '../views/QuestionView.vue'
+import RegisterView from '../views/RegisterView.vue'
+import SignInView from '../views/SignInView.vue'
 
 
 const router = createRouter({
@@ -29,7 +31,10 @@ const router = createRouter({
     {
       path: '/rschVue',
       name: 'Research',
-      component: ResearchVueView
+      component: ResearchVueView,
+      meta: {
+        requiresAuth: true,
+      },
     },
     {
       path: '/calcuView',
@@ -46,7 +51,30 @@ const router = createRouter({
       name: 'Question',
       component: QuestionView
     },
+    {
+      path: '/registerView',
+      name: 'Register',
+      component: RegisterView
+    },
+    {
+      path: '/signinView',
+      name: 'SignIn',
+      component: SignInView
+    },
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record)=> record.meta.requiresAuth)) {
+    if (getAuth().currentUser) {
+      next();
+    } else {
+      alert("You don't have access from here!");
+      next("/");
+    }
+  } else {
+    next();
+  }
+});
 
 export default router

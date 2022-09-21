@@ -1,19 +1,20 @@
 <template >
 <v-card
     class="ma-15"
-    max-width="700"
+    max-width="1500"
     style="padding-left: 20px; "
     
  >
-<v-img
-  src="https://cdn.discordapp.com/attachments/754747805200941196/1014446204244983849/zoom_in.png"
+<v-row>
+  <v-col>
+    <v-img
+  src="https://media.discordapp.net/attachments/754747805200941196/1014446204244983849/zoom_in.png"
   contain
-  max-height="250"
-  max-width="250"
+  max-height="200"
+  max-width="200"
   >
  
   </v-img>
-
   <div class="pl" >
     <p>
     <h1>About Me</h1>
@@ -34,7 +35,23 @@
     if you want to know how i Look like and know my status just click the link.
     </p>
   </div>
+</v-col>
+<v-col class="pl-15">
+  <v-img
+  src="https://media.discordapp.net/attachments/754747805200941196/1016918961100693634/unknown.png?width=351&height=473"
+  contain
+  max-height="350"
+  max-width="350"
+  
+  >
+ 
+  </v-img>
+  <p class="pl-10"> Really nice airflow! </p>
+</v-col>
+</v-row>
+
 </v-card>
+
 </template>
 
 <style>

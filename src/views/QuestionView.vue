@@ -24,6 +24,7 @@
 <script>
     import CustomModal from "../components/CustomModal.vue";
     import Quiz from "../components/Quiz.vue";
+    import firebase from "firebase/compat";
      
     export default {
      components: { Quiz, CustomModal },
@@ -41,8 +42,12 @@
      },
      methods: {
        handleQuizCompleted(score) {
+        var db = firebase.database().ref("/user")
          this.score = score;
          this.showModal = true;
+         db.push({
+          User_Score: score
+         });
        },
        updateQuiz() {
          this.showModal = false;

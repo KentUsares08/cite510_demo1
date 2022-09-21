@@ -7,7 +7,6 @@
         <span>Project</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-
       <!-- dropdown menu -->
     <v-menu
       open-on-hover
@@ -19,6 +18,7 @@
         >
           Item List
         </v-btn>
+
       </template>
    
       <v-list>
@@ -31,7 +31,7 @@
         </v-list-item>
       </v-list>
     </v-menu>
-
+    <button @click="handleSignOut" v-if="isLoggedIn">Sign Out</button>
     <v-img
   src="https://cdn.discordapp.com/attachments/754747805200941196/1014446204244983849/zoom_in.png"
   contain
@@ -60,10 +60,13 @@
 </template>
 
 <script setup>
-  import { ref } from 'vue'
+  import { onMounted, ref } from 'vue'
+  import {getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import router from '../router';
     
   const drawer = ref(false)
-
+  const isLoggedIn = ref(false);
+  
   const  items =  ref([
            { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
            { title: 'Activities', icon: 'mdi-view-dashboard', path: '/basicMath'},
@@ -77,5 +80,22 @@
   return drawer.value = !drawer.value
  }
 
+ let auth;
+ onMounted(()=>{
+    auth = getAuth();
+    onAuthStateChanged(auth, (user)=> {
+      if (user) {
+        isLoggedIn.value = true;
+      } else {
+        isLoggedIn.value = false;
+      }
+    });
+ });
+
+ const handleSignOut = () => {
+  signOut(auth).then(() => {
+    router.push("/");
+  });
+ };
  
 </script>
