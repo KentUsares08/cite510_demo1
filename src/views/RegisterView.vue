@@ -27,15 +27,6 @@
     </p>
     </v-card>
     </v-col>
-    <v-col>
-    <v-card  class="ma-5 px-5"
-    max-width="180"
-    color="#fafafa">
-    <p>
-        
-    </p>
-    </v-card>
-    </v-col>
     </v-row>
     </v-card>
 </template>

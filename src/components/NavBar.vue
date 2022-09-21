@@ -74,6 +74,8 @@ import router from '../router';
            { title: 'Research', icon: 'mdi-help-box', path: '/rschVue'},
            { title: 'Calculator', icon: 'mdi-plus-one', path: '/calcuView'},
            { title: 'Question', icon: 'mdi-plus-one', path: '/questionView'},
+           { title: 'Sign In', icon: 'mdi-help-box', path: '/signinView'},
+           { title: 'Register', icon: 'mdi-view-dashboard', path: '/registerView'},
         ])
 
  function toggleDrawer(){
