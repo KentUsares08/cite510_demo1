@@ -8,7 +8,9 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- dropdown menu -->
-      <router-link to="/questionView"  v-if="isLoggedIn"><a class="nav-link">Take a Quiz</a></router-link>
+      <router-link to="/questionView"  v-if="isLoggedIn"><a class="nav-link text-primary">Take a Quiz </a></router-link>
+      <router-link to="/calcuView"  v-if="isLoggedIn"><a class="nav-link text-success">Calculator </a></router-link>
+      <router-link to="/basicMath"  v-if="isLoggedIn"><a class="nav-link text-warning">Activities </a></router-link>
     <v-menu
       open-on-hover
     >
@@ -73,9 +75,7 @@ import router from '../router';
 
   const  items =  ref([
            { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
-           { title: 'Activities', icon: 'mdi-view-dashboard', path: '/basicMath'},
            { title: 'About the Project', icon: 'mdi-view-dashboard', path: '/aboutMe'},
-           { title: 'Calculator', icon: 'mdi-plus-one', path: '/calcuView'},
            { title: 'Research', icon: 'mdi-plus-one', path: '/rschVue'},
         ])
 
