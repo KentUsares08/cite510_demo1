@@ -18,13 +18,13 @@
         <input type="password" placeholder="Password" v-model="password" />
     </p>
     </v-card>
-
-    <v-card  class="ma-15"
-    max-width="544"
-    color="#ebebeb">
+    <p class="ml-15 pa-5" v-if="errMsg">{{ errMsg }}</p>
+    <v-card  class="ma-15 pl-5"
+    max-width="144"
+    color="">
     
-    <p v-if="errMsg">{{ errMsg }}</p>
-        <button @click="login"> Log In </button>
+        <button to="/rschVue" @click="login"> Log In </button>
+
     <p>
     
     </p>

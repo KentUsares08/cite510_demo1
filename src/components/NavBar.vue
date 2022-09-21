@@ -8,6 +8,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <!-- dropdown menu -->
+      <router-link to="/questionView"  v-if="isLoggedIn"><a class="nav-link">Take a Quiz</a></router-link>
     <v-menu
       open-on-hover
     >
@@ -20,7 +21,6 @@
         </v-btn>
 
       </template>
-   
       <v-list>
         <v-list-item
           v-for="(item, index) in items"
@@ -32,6 +32,8 @@
       </v-list>
     </v-menu>
     <button @click="handleSignOut" v-if="isLoggedIn">Sign Out</button>
+   <router-link to="/signinView"  v-if="isLoggedOut"><a class="nav-link">Login  ,</a></router-link>
+   <router-link to="/registerView"  v-if="isLoggedOut"><a class="nav-link">Register</a></router-link>
     <v-img
   src="https://cdn.discordapp.com/attachments/754747805200941196/1014446204244983849/zoom_in.png"
   contain
@@ -66,16 +68,15 @@ import router from '../router';
     
   const drawer = ref(false)
   const isLoggedIn = ref(false);
-  
+
+  const isLoggedOut = ref(false);
+
   const  items =  ref([
            { title: 'Home', icon: 'mdi-view-dashboard', path: '/'},
            { title: 'Activities', icon: 'mdi-view-dashboard', path: '/basicMath'},
            { title: 'About the Project', icon: 'mdi-view-dashboard', path: '/aboutMe'},
-           { title: 'Research', icon: 'mdi-help-box', path: '/rschVue'},
            { title: 'Calculator', icon: 'mdi-plus-one', path: '/calcuView'},
-           { title: 'Question', icon: 'mdi-plus-one', path: '/questionView'},
-           { title: 'Sign In', icon: 'mdi-help-box', path: '/signinView'},
-           { title: 'Register', icon: 'mdi-view-dashboard', path: '/registerView'},
+           { title: 'Research', icon: 'mdi-plus-one', path: '/rschVue'},
         ])
 
  function toggleDrawer(){
@@ -94,9 +95,20 @@ import router from '../router';
     });
  });
 
+ onMounted(()=>{
+    auth = getAuth();
+    onAuthStateChanged(auth, (user)=> {
+      if (user) {
+        isLoggedOut.value = false;
+      } else {
+        isLoggedOut.value = true;
+      }
+    });
+ });
+
  const handleSignOut = () => {
   signOut(auth).then(() => {
-    router.push("/");
+    router.push("/registerView");
   });
  };
  

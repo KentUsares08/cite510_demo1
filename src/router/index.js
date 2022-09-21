@@ -32,9 +32,6 @@ const router = createRouter({
       path: '/rschVue',
       name: 'Research',
       component: ResearchVueView,
-      meta: {
-        requiresAuth: true,
-      },
     },
     {
       path: '/calcuView',
